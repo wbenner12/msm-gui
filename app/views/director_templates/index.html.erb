@@ -2,30 +2,32 @@
   List of all directors
 </h1>
 
-<form action="/insert_director_record" method="post">
-  <div>
-    <label for="name_field">Name</label>
-    <input id="name_field" type="text" name="the_name">
-  </div>
+<hr>
 
-  <div>
-    <label for="dob_field">Dob</label>
-    <input id="dob_field" type="date" name="the_dob">
-  </div>
+  <form action="/insert_director_record" method="post">
+    <div>
+      <label for="name_field">Name</label>
+      <input type="text" name="name" id="name_field">
+    </div>
 
-  <div>
-    <label for="bio_field">Bio</label>
-    <input id="bio_field" type="text" name="the_bio">
-  </div>
+    <div>
+      <label for="dob_field">Dob</label>
+      <input type="date" name="dob" id="dob_field">
+    </div>
 
-  <div>
-    <label for="image_field">Image</label>
-    <input id="image_field" type="link" name="the_image">
-  </div>
+    <div>
+      <label for="bio_field">Bio</label>
+      <textarea name="bio" id="bio_field"></textarea>
+    </div>
 
-  <button>
-    Create director
-  </button>
+    <div>
+      <label for="image_field">Image</label>
+      <input type="text" name="image" id="image_field">
+    </div>
+
+    <button>Create director</button>
+
+  </form>
 
 <hr>
 

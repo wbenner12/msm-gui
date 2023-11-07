@@ -5,27 +5,28 @@
 <form action="/insert_actor_record" method="post">
   <div>
     <label for="name_field">Name</label>
-    <input id="name_field" type="text" name="the_name">
+    <input id="name_field" type="text" name="name">
   </div>
 
   <div>
     <label for="dob_field">Dob</label>
-    <input id="dob_field" type="date" name="the_dob">
+    <input id="dob_field" type="date" name="dob">
   </div>
 
   <div>
     <label for="bio_field">Bio</label>
-    <input id="bio_field" type="text" name="the_bio">
+    <input id="bio_field" type="text" name="bio">
   </div>
 
   <div>
     <label for="image_field">Image</label>
-    <input id="image_field" type="link" name="the_image">
+    <input id="image_field" type="text" name="image">
   </div>
 
   <button>
     Create actor
   </button>
+</form>
 
 <hr>
 
@@ -67,18 +68,6 @@
 
     <td>
       <%= an_actor.dob %>
-    </td>
-
-    <td>
-      <% matching_actors = Actor.where({ :id => an_actor.actor_id }) %>
-      
-      <% the_actor = matching_actors.at(0) %>
-
-      <% if the_actor == nil %>
-        Uh Oh! We weren't able to find an actor for this movie.
-      <% else %>
-        <%= the_actor.name %>
-      <% end %>
     </td>
 
     <td>
